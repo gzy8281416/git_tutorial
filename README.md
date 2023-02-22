@@ -61,3 +61,18 @@ pip install pandas
 pip install scikit-learn
 pip install xgboost
 ```
+
+## Step 4: Add logging to record the hyperparamters and the metrics 
+
+- Instead of printing the best set of hyperparameter values, use logging to add log messages that can capture these values. 
+
+## Step 5: Commit the changes and push them to a remote git repository. 
+
+- Use the relevant git command to *commit* the code into the local version of your repository
+- Use the relevant git command to *push* the committed code into the `hyperparams_and_logging` branch of the remote repository (in github)
+
+## Step 6: Submit a pull request
+
+- Use the github web user interface to submit a ***pull request*** to your repository. Details found [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)  
+
+***Hint:*** Details about pushing the new code to the branch is also found [here](https://comp0190.github.io/lectures/topics/3_tuning/git.html)
