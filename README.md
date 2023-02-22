@@ -1,4 +1,4 @@
-# Bash, Git, Hyperparameter Tuning and Logging Experiments# COMP0190 Git Tutorial
+# Bash, Git, Hyperparameter Tuning and Logging Experiments
 
 This week we are going to learn about a few ideas that will allow you to execute the development part of your thesis projects more successful. We are going to learn to about a few tools, namely, 
 
