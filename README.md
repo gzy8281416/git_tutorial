@@ -76,3 +76,4 @@ pip install xgboost
 - Use the github web user interface to submit a ***pull request*** to your repository. Details found [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)  
 
 ***Hint:*** Details about pushing the new code to the branch is also found [here](https://comp0190.github.io/lectures/topics/3_tuning/git.html)
+https://alida.tistory.com/69
