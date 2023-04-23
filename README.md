@@ -76,27 +76,3 @@ pip install xgboost
 - Use the github web user interface to submit a ***pull request*** to your repository. Details found [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)  
 
 ***Hint:*** Details about pushing the new code to the branch is also found [here](https://comp0190.github.io/lectures/topics/3_tuning/git.html)
-
-https://alida.tistory.com/69
-
-3c
-reprojection error
-he re-projection error corresponds to the image distance between a projected point and a measured point, and is used to quantify how closely the estimate of a 3D point recreates the true projection [13]. The projection error cost function through bundle adjustment is shown in Equation 20.
-
-ORB-SLAM (Oriented FAST and Rotated BRIEF Simultaneous Localization and Mapping) is a feature-based monocular SLAM system that employs outlier rejection techniques to improve the robustness of its tracking algorithm. The two primary techniques used for outlier rejection in ORB-SLAM are reprojection error and RANSAC (Random Sample Consensus). These techniques are used to reject outliers in the feature matching process, which helps to ensure that the system only uses reliable correspondences to estimate the camera pose and map structure.
-    1. Reprojection Error:
-Reprojection error is the difference between the observed feature location in the image and the projected location of the corresponding 3D point. For a given camera pose and 3D point, the reprojection error (e) can be computed as follows:
-e = || x - K * (R * X + t) ||
-where:
-    • x is the observed 2D image point
-    • K is the camera's intrinsic matrix
-    • R is the rotation matrix of the camera pose
-    • t is the translation vector of the camera pose
-    • X is the 3D point in the world coordinate system
-In ORB-SLAM, when matching features between the current frame and the local map, a threshold on the reprojection error is used to reject outliers. By keeping only matches with a low reprojection error, ORB-SLAM ensures that the resulting correspondences are more likely to be correct.
-    2. RANSAC:
-RANSAC is an iterative method for estimating a model's parameters from a set of data points that may contain outliers. In the context of ORB-SLAM, RANSAC is used to find a consistent set of feature correspondences between the current frame and the local map, and to estimate the camera pose.
-The RANSAC algorithm for camera pose estimation in ORB-SLAM can be described as follows:
-a. Randomly select a minimal subset of feature correspondences. b. Compute the camera pose (R, t) from the selected correspondences using a perspective-n-point (PnP) algorithm. c. Calculate the reprojection error for all correspondences using the estimated camera pose. d. Count the number of inliers (i.e., correspondences with a reprojection error below a predefined threshold). e. Repeat steps a-d for a predefined number of iterations. f. Choose the camera pose with the largest number of inliers.
-By using RANSAC in conjunction with the reprojection error, ORB-SLAM is able to effectively reject outliers and obtain a reliable estimate of the camera pose, which is crucial for accurate and robust tracking in SLAM systems.
-
